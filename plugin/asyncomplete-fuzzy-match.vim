@@ -3,7 +3,7 @@ if exists('g:asyncomplete_fuzzy_match_loaded')
 endif
 let g:asyncomplete_fuzzy_match_loaded = 1
 
-let g:asyncomplete_fuzzy_match_path = get(g:, 'asyncomplete_fuzzy_match_path', expand('<sfile>:p:h:h') . '/target/release/asyncomplete-fuzzy-matcher')
+let g:asyncomplete_fuzzy_match_path = get(g:, 'asyncomplete_fuzzy_match_path', expand('<sfile>:p:h:h') . '/bin/asyncomplete-fuzzy-matcher')
 let g:asyncomplete_fuzzy_match_priorities = get(g:, 'asyncomplete_fuzzy_match_priorities', {})
 
 augroup asyncomplete_fuzzy_match

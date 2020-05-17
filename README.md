@@ -16,7 +16,7 @@ cargo build --release
 ### With [vim-plug](https://github.com/junegunn/vim-plug)
 
 ```
-Plug 'tsufeki/asyncomplete-fuzzy-match', {
-    \ 'do': 'cargo build --release',
+Plug 'waltarix/asyncomplete-fuzzy-match', {
+    \ 'do': 'make install',
     \ }
 ```

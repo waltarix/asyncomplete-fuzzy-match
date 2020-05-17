@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+set -ue
+
+repository=https://github.com/waltarix/asyncomplete-fuzzy-match/releases/download/v${VERSION:-}
+full_bin_name=${FULL_BIN_NAME:-}-
+
+case $OSTYPE in
+	darwin*)
+		full_bin_name+=mac
+		;;
+	linux*)
+		full_bin_name+=linux
+		;;
+	*)
+		echo "unsupported OSTYPE: $OSTYPE" >&2
+		exit 1
+esac
+
+curl -sL ${repository}/${full_bin_name}.tar.xz \
+	| tar -C $BIN_DIR -Jxvf -
